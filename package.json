@@ -1,8 +1,9 @@
 {
-	"dependencies": {
-		"express": "^4.18.2"
-	},
-	"scripts": {
-		"start": "node server.js"
-	}
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build:digitalocean": "pnpm install --production=false && pnpm run build && rm -rf node_modules && pnpm install --production --frozen-lockfile"
+  }
 }
